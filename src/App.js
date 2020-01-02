@@ -8,6 +8,8 @@ import Private from "./Components/Routes/Private"
 
 // style imports
 import Header from "./Components/Header/home-header"
+import Calendar from './Components/calendar/Calendar'
+
 import SideBar from "./Components/Header/sideBar"
 
 
@@ -20,6 +22,7 @@ function App() {
        {/* <Route exact path='/' component ={SignUp} />
        <Route exact path='/login' component ={Login} /> */}
      </div>
+
    </Router>
   );
 }
