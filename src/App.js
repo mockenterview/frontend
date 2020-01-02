@@ -8,7 +8,9 @@ import {Login} from "./Components/Login/Login"
 import {Register} from "./Components/Register/Register"
 // style imports
 import Header from "./Components/Header/home-header"
+import Calendar from './Components/calendar/Calendar'
 
+import SideBar from "./Components/Header/sideBar"
 
 
 function App() {
@@ -19,7 +21,11 @@ function App() {
        
        <Route exact path='/' component ={Register} />
        <Route exact path='/login' component ={Login} />
+       <SideBar />
+       {/* <Route exact path='/' component ={SignUp} />
+       <Route exact path='/login' component ={Login} /> */}
      </div>
+
    </Router>
   );
 }
