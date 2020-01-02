@@ -1,24 +1,25 @@
 import React from 'react'
 import { Link } from "react-router-dom"
-
+import './home-header.css';
 const header = () => {
     return (
         <div className='header'>
-            <span className='logo'>
+            <div className='logo'>
                 MockEnterView
-            </span>
+            </div>
             <nav>
-                <span className='link'>
+                <div className='link'>
                     <a>Home</a>
                 {/* need links to deployed pages */}
                     <a>About</a>
                 {/* Need links to about page */}
                     <a>For Employees</a>
-                </span>
-                <span className='auth'>
+                    <a>FAQ</a>
+                </div>
+                <div className='auth'>
                     <Link to='/login'>Login</Link>
                     <Link to='/'>Sign Up</Link>
-                </span>
+                </div>
             </nav>
         </div>
     )
