@@ -20,7 +20,7 @@ function App() {
        <Header />
        {/* <Route exact path='/' component ={Register} /> */}
        <Route exact path='/login' component ={Login} />
-       
+       <SideBar />
       
      </div>
 

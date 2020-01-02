@@ -1,7 +1,7 @@
 .sidebar {
 width: 15%;
 height: 90%;
-margin-left: 82%;
+float: right;
 
 background: #1E4588;
 color: #ffffff;

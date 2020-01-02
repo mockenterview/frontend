@@ -1,8 +1,14 @@
-import React from 'react'
-import { Button, Nav, NavItem, NavLink  } from 'reactstrap';
+import React, {useState} from 'react'
+import { Button, Nav, NavItem, NavLink,Dropdown, DropdownToggle, DropdownMenu, DropdownItem  } from 'reactstrap';
 import './home-header.css';
 
-const header = () => {
+
+const Header = () => {
+
+    const [dropdownOpen, setDropdownOpen] = useState(false);
+    const toggle = () => setDropdownOpen(prevState => !prevState);
+
+    
     return (
         <div className='header'>
             <div className='logo'>
@@ -14,9 +20,17 @@ const header = () => {
              <NavItem>
                 <NavLink href="#">Home</NavLink>
             </NavItem>
-            <NavItem>
-                <NavLink href="#">Link</NavLink>
-            </NavItem>
+            <Dropdown isOpen={dropdownOpen} toggle={toggle}>
+                <DropdownToggle color='link' caret >
+                    About
+                </DropdownToggle>
+                <DropdownMenu>
+                    <DropdownItem href="#">How It Works</DropdownItem>
+                    <DropdownItem href="#">Our Team</DropdownItem>
+                    <DropdownItem href="#">COntact</DropdownItem>
+                </DropdownMenu>
+    </Dropdown>
+
             <NavItem>
                  <NavLink href="#">Employees</NavLink>
             </NavItem>
@@ -36,4 +50,4 @@ const header = () => {
         </div>
     )
 }
-export default header
+export default Header
