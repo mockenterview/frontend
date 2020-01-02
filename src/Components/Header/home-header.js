@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from "react-router-dom"
 import './home-header.css';
+
 const header = () => {
     return (
         <div className='header'>
