@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from "react-router-dom"
+import { Button, Nav, NavItem, NavLink  } from 'reactstrap';
 import './home-header.css';
 
 const header = () => {
@@ -8,20 +8,31 @@ const header = () => {
             <div className='logo'>
                 MockEnterView
             </div>
-            <nav>
+            <div className='nav'>
+            <Nav>
                 <div className='link'>
-                    <a>Home</a>
-                {/* need links to deployed pages */}
-                    <a>About</a>
-                {/* Need links to about page */}
-                    <a>For Employees</a>
-                    <a>FAQ</a>
-                </div>
+             <NavItem>
+                <NavLink href="#">Home</NavLink>
+            </NavItem>
+            <NavItem>
+                <NavLink href="#">Link</NavLink>
+            </NavItem>
+            <NavItem>
+                 <NavLink href="#">Employees</NavLink>
+            </NavItem>
+            <NavItem>
+                 <NavLink href="#">Employers</NavLink>
+            </NavItem>
+            <NavItem>
+                 <NavLink href="#">FAQ</NavLink>
+            </NavItem> 
+            </div>   
                 <div className='auth'>
-                    <Link to='/login'>Login</Link>
-                    <Link to='/'>Sign Up</Link>
+                    <Button color="primary">Login</Button>
+                    <Button color="primary">Sign Up</Button>
                 </div>
-            </nav>
+            </Nav>
+            </div>
         </div>
     )
 }
