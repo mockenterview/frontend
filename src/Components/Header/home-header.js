@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from "react-router-dom"
 
-export const header = () => {
+const header = () => {
     return (
         <div className='header'>
             <span className='logo'>
@@ -23,3 +23,4 @@ export const header = () => {
         </div>
     )
 }
+export default header
