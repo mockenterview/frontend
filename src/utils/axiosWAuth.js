@@ -6,8 +6,10 @@ const axiosWithAuth = () => {
 
   return axios.create({
     headers: {
-      Authorization: token
-    }
+      baseURL:'https://mockenterview.herokuapp.com/api',
+      headers:{
+      authorization: token,
+    }}
   });
 };
 
