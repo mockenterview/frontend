@@ -42,7 +42,7 @@ const SideBar = props => {
 					Interviews 
 				</p>
 					<NavItem>
-						<NavLink to="#">
+						<NavLink to="/profile">
 							{" "}
 							<i class="fa fa-clock-o" /> Schedule New
 						</NavLink>
