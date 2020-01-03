@@ -328,9 +328,9 @@ const Profile = () => {
   }
 
   return (
-    <Container className='profile'>
+    <div className='profile'>
       <Row>
-      <Col xs="12" sm="12" md="5">
+      <Col>
           <InterviewList
             interviewers={interviewers}
             selectProfile={selectProfile}
@@ -339,14 +339,15 @@ const Profile = () => {
             search={search}
           />
         </Col>
-          <Col xs="12" sm="12" md="5">
+          <Col>
           <ProfilePreview selected={selection} />
         </Col>
-        </Row>
-        <Col>
         <Sidebar />
-        </Col>
-    </Container>
+        </Row>
+        
+        
+  
+    </div>
   );
 };
 

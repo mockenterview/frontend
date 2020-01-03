@@ -26,18 +26,26 @@ export default function ProfilePreview({ selected }) {
       <div>
       <Button color="primary" onClick={toggle}><i class="fa fa-calendar"></i> Calendar</Button>
       <Modal isOpen={modal} toggle={toggle} className='avail'>
-        <ModalHeader toggle={toggle}>Modal title</ModalHeader>
+        <ModalHeader toggle={toggle}>Choose a Time</ModalHeader>
         <ModalBody>
          <Calendar />
         </ModalBody>
-        <ModalFooter>
-          Pop out for schedule
-        </ModalFooter>
       </Modal>
     </div>
-        
       </div>
-      <div className="profile-button">Feedback</div>
+      <div className="fb">
+        {/* change onclick toggle to a secondary toggle */}
+      <Button color="primary"><i class="fa fa-pie-chart"></i> Feedback</Button>
+      {/* <Modal isOpen={modal} toggle={toggle} className='feedback'>
+        <ModalHeader toggle={toggle}>Feedback</ModalHeader>
+        <ModalBody>
+         FORM
+        </ModalBody>
+        <ModalFooter>
+          <Button color="primary" onClick={toggle}>Submit</Button>
+        </ModalFooter>
+      </Modal> */}
+      </div>
       </div>
     
   );
