@@ -13,7 +13,11 @@ const Profile = () =>{
         [
             {
               bio: "This is a Bio",
-              skills: [{ name: "Be cool" }],
+              skills: [
+                  { name: "Bark" },
+                  { name: "Sit" },
+                  { name: "Lay" },
+                ],
               jobTitle: 'Designer',
               city: "New York",
               state: "New York",
@@ -40,7 +44,11 @@ const Profile = () =>{
             },
             {
               bio: "This is a Bio",
-              skills: [{ name: "Be cool" }],
+              skills:  [
+                { name: "Jump" },
+                { name: "Fly" },
+                { name: "Exterminate" },
+              ],
               jobTitle: 'Dog Trainer',
               city: "New York",
               state: "New York",
@@ -68,7 +76,7 @@ const Profile = () =>{
           ]
       );
 
-          const [selection, setSelection] = useState({})
+          const [selection, setSelection] = useState({skills: []})
 
       function selectProfile(e){
         setSelection(e)
@@ -77,10 +85,10 @@ const Profile = () =>{
     return (
         <div className="profile">
             <Row>
-            <Col md="3">
-            <InterviewList interviewers={interviewers} selectProfile={selectProfile}  />
+            <Col md="4">
+            <InterviewList interviewers={interviewers} selectProfile={selectProfile} selected={selection}  />
             </Col>
-            <Col md="3">
+            <Col md="auto">
             <ProfilePreview selected={selection}/>
             </Col>
             
