@@ -36,7 +36,7 @@ const sideBar = (props) => {
 			</Nav>
 			<br />
 			<Nav vertical>
-				<p>Interviews</p>
+				<p>INTERVIEWS</p>
 				<NavItem>
 					<NavLink href="#">Schedule New</NavLink>
 				</NavItem>

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 
 const HowWorks = () => {
@@ -26,7 +27,7 @@ const HowWorks = () => {
                 </div>
             </div>
            <div >
-           <button href='/register'>Sign Up</button>
+           <button >Sign Up</button>
            </div>
             
         </div>
