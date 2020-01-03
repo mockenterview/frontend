@@ -19,7 +19,7 @@ function App() {
    <Router>
      <div className='App'>
        <Header />
-       {/* <Route exact path='/' component ={Register} /> */}
+       <Route exact path='/' component ={Register} />
        <Route exact path='/login' component ={Login} />
        <Route exact path='/userDashboard' component={userDashboard} />
        {/* <Groups /> */}
