@@ -118,7 +118,10 @@
 .profile-preview .availability{
     margin: 20px 0;
 }
-
+.modal-body .calendar {
+    width: 100%;
+    margin: 0 auto;
+}
 .profile-preview .profile-button{
     background: #1E4588;
     color: white;
@@ -126,6 +129,4 @@
     padding: 5px 5px;
     margin: 10px 0;
     cursor: pointer;
-
-
 }
