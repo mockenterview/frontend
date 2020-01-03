@@ -11,7 +11,7 @@ function UserDashboard() {
     return (
     <Container>
         <Col>
-        <Groups />
+        {/* <Groups /> */}
         </Col>
 
         <Col>
@@ -19,7 +19,7 @@ function UserDashboard() {
         </Col>
 
         <Col>
-            <Calendar />
+            {/* <Calendar /> */}
         </Col>
     </Container>
     );

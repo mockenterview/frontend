@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import { Button, Nav, NavItem, NavLink,Dropdown, DropdownToggle, DropdownMenu, DropdownItem  } from 'reactstrap';
+import { Button,Navbar, Nav, NavItem, NavLink,Dropdown, DropdownToggle, DropdownMenu, DropdownItem  } from 'reactstrap';
 import './home-header.css';
 
 
@@ -10,7 +10,7 @@ const Header = props => {
 
     
     return (
-        <div className='header'>
+        <Navbar className='header'>
             <div className='logo'>
                 MockEnterView
             </div>
@@ -46,7 +46,7 @@ const Header = props => {
                 </div>
             </Nav>
             </div>
-        </div>
+        </Navbar>
     )
 }
 export default Header
