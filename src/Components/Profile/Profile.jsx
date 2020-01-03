@@ -342,16 +342,12 @@ const Profile = () => {
         <Col>
           <ProfilePreview selected={selection} />
         </Col>
-<<<<<<< HEAD
 
         <Sidebar />
 
       </Container>
   
-=======
-        
-    </Container>
->>>>>>> 5074a15d63fe31e262840e32006f6bda3dc96663
+    
   );
 };
 
