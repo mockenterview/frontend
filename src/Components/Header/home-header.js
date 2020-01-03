@@ -1,6 +1,10 @@
 import React, {useState} from 'react'
 import { Button,Navbar, Nav, NavItem, NavLink,Dropdown, DropdownToggle, DropdownMenu, DropdownItem  } from 'reactstrap';
 import './home-header.css';
+import { Redirect } from 'react-router-dom';
+
+import {Login} from "../Login/Login"
+import {Register} from "../Register/Register"
 
 
 const Header = props => {
@@ -41,8 +45,8 @@ const Header = props => {
             </NavItem> 
             </div>   
                 <div className='auth'>
-                    <Button color="primary" onClick={() => props.history.push("/login")}>Login</Button>
-                    <Button color="primary" onClick={() => props.history.push("/register")}>Sign Up</Button>
+                    <Button color="primary" onClick={<Redirect to={Login} /> }>Login</Button>
+                    <Button color="primary" onClick={<Redirect to={Register} />}>Sign Up</Button>
                 </div>
             </Nav>
             </div>

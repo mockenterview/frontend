@@ -17,7 +17,8 @@ import Axios from 'axios';
 
 export const Login = ({ values, errors, touched, status }) => {
 	return (
-		<Container fluid="sm" className="reg_log_wrapper">
+		<div className="reg_log_wrapper">
+		<Container fluid >
 			<Button close />
 			<Col>
 				<Row>
@@ -89,5 +90,6 @@ export const Login = ({ values, errors, touched, status }) => {
 				</Row> */}
 			</Col>
 		</Container>
+		</div>
 	);
 };

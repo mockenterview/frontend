@@ -343,9 +343,9 @@ const Profile = () => {
         <Col xs="12" sm="12" md="5">
           <ProfilePreview selected={selection} />
         </Col>
-        <Col>
+
         <Sidebar />
-        </Col>
+
       </Row>
     </div>
   );
