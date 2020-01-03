@@ -11,6 +11,10 @@ import Header from "./Components/Header/home-header"
 import Calendar from './Components/calendar/Calendar'
 import Groups from "./Components/Interviews/GroupCards"
 import SideBar from "./Components/Header/sideBar"
+import About from "./Components/About/About"
+import userDashboard from "./Components/UserDashboard"
+
+import Profile from './Components/Profile/Profile'
 
 
 function App() {
@@ -18,13 +22,20 @@ function App() {
    <Router>
      <div className='App'>
        <Header />
-       {/* <Route exact path='/' component ={Register} /> */}
+       <Route exact path='/' component={About} />
        <Route exact path='/login' component ={Login} />
        <Groups />
        <SideBar />
        {/* <Route exact path='/' component ={SignUp} />
        <Route exact path='/login' component ={Login} /> */}
-       <Calendar/>
+      
+       <Route exact path='/register' component ={Register} />
+       
+       
+       <Route exact path='/profile' component ={Profile} />
+       <Route exact path='/userDashboard' component={userDashboard} />
+
+       
       
      </div>
 
