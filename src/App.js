@@ -13,6 +13,8 @@ import Groups from "./Components/Interviews/GroupCards"
 import SideBar from "./Components/Header/sideBar"
 import userDashboard from "./Components/UserDashboard"
 
+import Profile from './Components/Profile/Profile'
+
 
 function App() {
   return (
@@ -21,9 +23,11 @@ function App() {
        <Header />
        {/* <Route exact path='/' component ={Register} /> */}
        <Route exact path='/login' component ={Login} />
+       <Route exact path='/profile' component ={Profile} />
+       <SideBar />
+    
        <Route exact path='/userDashboard' component={userDashboard} />
-       {/* <Groups /> */}
-       {/* <SideBar /> */}
+
        {/* <Route exact path='/' component ={SignUp} />
        <Route exact path='/login' component ={Login} /> */}
        
