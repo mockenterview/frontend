@@ -48,7 +48,8 @@ export const MyTextInput = ({ label, ...props }) => {
 export const Register = (props, { values, errors, touched, status }) => {
 
 	return (
-    <Container fluid="md"  className="reg_log_wrapper">
+		<div className="TestLog">
+	  <Container fluid="xs"  className="reg_log_wrapper">
       <Col >
       <Button close href="/" />
 			<Row>
@@ -156,5 +157,7 @@ export const Register = (props, { values, errors, touched, status }) => {
 
       </Col>
 		</Container>
+		</div>
+
 	);
 };
