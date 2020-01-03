@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Container, Col } from "reactstrap";
+import { Container, Col, Row } from "reactstrap";
 
 import "./profile.css";
 // Components
@@ -313,7 +313,6 @@ const Profile = () => {
 
   const [selection, setSelection] = useState({ skills: [] });
   const [filteredData, updateData] = useState([])
-
   const search = data => {
       updateData(data)
       
@@ -330,7 +329,8 @@ const Profile = () => {
 
   return (
     <Container className='profile'>
-      <Col>
+      <Row>
+      <Col xs="12" sm="12" md="5">
           <InterviewList
             interviewers={interviewers}
             selectProfile={selectProfile}
@@ -339,10 +339,13 @@ const Profile = () => {
             search={search}
           />
         </Col>
-        <Col>
+          <Col xs="12" sm="12" md="5">
           <ProfilePreview selected={selection} />
         </Col>
-        
+        </Row>
+        <Col>
+        <Sidebar />
+        </Col>
     </Container>
   );
 };

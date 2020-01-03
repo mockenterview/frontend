@@ -7,7 +7,6 @@ import './profile.css'
 export default function InterviewerCard({interviewer, selectProfile, selected}){
     return (
         <div className={`interviewer-card ${selected.firstName == interviewer.firstName ? 'card-active' : ''}`} onClick={()=>{selectProfile(interviewer)}}>
-        
             <ListGroupItem>
             <Container>
             <Row>
@@ -23,15 +22,12 @@ export default function InterviewerCard({interviewer, selectProfile, selected}){
                 <Row>
                 <div className="role">
                         {interviewer.jobTitle}
-                    </div>
+                </div>
                 </Row>
                 </Col>
             </Row>
-
             </Container>
-
             </ListGroupItem>
-
         </div>
     )
 }
