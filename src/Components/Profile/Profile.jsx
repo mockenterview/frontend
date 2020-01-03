@@ -90,7 +90,7 @@ const Profile = () => {
   return (
     <div className="profile">
       <Row>
-        <Col md="4">
+        <Col xs="12" sm="12" md="4">
           <InterviewList
             interviewers={interviewers}
             selectProfile={selectProfile}
@@ -99,7 +99,7 @@ const Profile = () => {
             search={search}
           />
         </Col>
-        <Col md="auto">
+        <Col xs="12" sm="12" md="5">
           <ProfilePreview selected={selection} />
         </Col>
       </Row>
