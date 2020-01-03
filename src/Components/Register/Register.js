@@ -142,14 +142,18 @@ export const Register = (props, { values, errors, touched, status }) => {
 				</Form>
 			</Formik>
 
-			<div>
+      {/* Skipping LinkedIn Oauth for now */}
+
+			{/* <div>
 				<p>or</p>
 			</div>
 
 			<Row>
 				<p>Sign Up With</p>
         <img src="src\images\kisspng-linkedin-business-marketing-social-networking-serv-company-profile-5ac8b49c8802a9.8421942815231028765571.png"></img>
-			</Row>
+			</Row> */}
+
+
       </Col>
 		</Container>
 	);

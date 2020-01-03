@@ -76,6 +76,9 @@ export const Login = ({ values, errors, touched, status }) => {
 					</Form>
 				</Formik>
 
+
+{/* Skipping LinkedIn Oauth for now */}
+{/* 
 				<div>
 					<p>or</p>
 				</div>
@@ -83,7 +86,7 @@ export const Login = ({ values, errors, touched, status }) => {
 				<Row>
 					<p>Sign In With</p>
 					<img src="src\images\kisspng-linkedin-business-marketing-social-networking-serv-company-profile-5ac8b49c8802a9.8421942815231028765571.png"></img>
-				</Row>
+				</Row> */}
 			</Col>
 		</Container>
 	);
