@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { Button } from 'reactstrap'
 
 
 const HowWorks = () => {
@@ -26,8 +27,8 @@ const HowWorks = () => {
                    </div>
                 </div>
             </div>
-           <div >
-           <button >Sign Up</button>
+           <div className="HowItWorks-RegisterButton">
+           <Button color='info' href="/Register" block >Sign Up</Button>
            </div>
             
         </div>

@@ -12,8 +12,6 @@ function UserDashboard() {
     <>
         <Container className="wrapper">
             <Row>
-                <Groups />
-
                     <Calendar />
 
                     <SideBar />
