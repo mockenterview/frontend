@@ -31,20 +31,20 @@ const Header = props => {
                     About
                 </DropdownToggle>
                 <DropdownMenu>
-                    <DropdownItem href="#works">How It Works</DropdownItem>
-                    <DropdownItem href="#team">Our Team</DropdownItem>
-                    <DropdownItem href="#contact">Contact</DropdownItem>
+                    <DropdownItem href="/#works">How It Works</DropdownItem>
+                    <DropdownItem href="/#team">Our Team</DropdownItem>
+                    <DropdownItem href="/#contact">Contact</DropdownItem>
                 </DropdownMenu>
             </Dropdown>
             <NavItem>
-                 <NavLink href="#mission">Mission</NavLink>
+                 <NavLink href="/#mission">Mission</NavLink>
             </NavItem>
-            <NavItem>
+            {/* <NavItem>
                  <NavLink disabled href="#">Employees</NavLink>
             </NavItem>
             <NavItem>
                  <NavLink disabled href="#">FAQ</NavLink>
-            </NavItem> 
+            </NavItem>  */}
             </div>   
                 <div className='auth'>
                     <Button color="primary" href="/login">Login</Button>
