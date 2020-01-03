@@ -14,6 +14,7 @@ const Header = props => {
 
     
     return (
+        <div>
         <Navbar className='header'>
 
             <div>
@@ -47,12 +48,13 @@ const Header = props => {
             </NavItem>  */}
             </div>   
                 <div className='auth'>
-                    <Button color="primary" href="/login">Login</Button>
-                    <Button color="primary" href="/register" >Sign Up</Button>
+                    <Button color="info" href="/login">Login</Button>
+                    <Button color="info" href="/register" >Sign Up</Button>
                 </div>
             </Nav>
             </div>
         </Navbar>
+        </div>
     )
 }
 export default Header
