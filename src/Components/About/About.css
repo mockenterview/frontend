@@ -45,6 +45,14 @@ filter: drop-shadow(0 1rem 0.75rem rgba(41, 3, 34, 0.747));
     justify-content: flex-start;
     align-content: flex-start;
 }
+.point-header {
+    font-size: 1.5rem;
+}
+button {
+    width: 45%;
+    background-color: 007BFF;
+    border-radius: 5px;
+}
 /* MIssion */
 .mission {
     background-color: #1E4588;
@@ -79,6 +87,7 @@ filter: drop-shadow(0 1rem 0.75rem rgba(41, 3, 34, 0.747));
     color: rgb(241, 8, 241);
     filter: drop-shadow(0 1rem 0.75rem rgba(190, 8, 160, 0.747))
 }
+
 
 /* Team  */
 .Team {
