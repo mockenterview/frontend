@@ -6,6 +6,7 @@ const Mission = () => {
     const [jobsCount, setJobsCount] = React.useState(80000)
 
     return (
+        <div>
         <div className='mission' id='mission'>
             <div className='blurb'>
                 <h2>Practice. Guide. Discover.</h2>
@@ -14,17 +15,23 @@ const Mission = () => {
             <div className='counts'>
                 <div className='cardCount'>
                     <div className='number'>{memberCount}</div>
-                    <div>Members joined since 2019</div>
+                    <div className='cardCountText'>Members joined since 2019</div>
                 </div>
                 <div className='cardCount'>
                     <div className='number'>{intHours}</div>
-                    <div>Hours of Interviews</div>
+                    <div className='cardCountText'>Hours of Interviews</div>
                 </div>
                 <div className='cardCount'>
                     <div className='number'>{jobsCount}</div>
-                    <div>Job Offers Landed</div>
+                    <div className='cardCountText'>Job Offers Landed</div>
                 </div>
             </div>
+        </div>
+        <div className='mission-startnow'>
+
+            <img url="https://images.unsplash.com/photo-1551836022-8b2858c9c69b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"></img>
+        </div>
+
         </div>
     )
 }
