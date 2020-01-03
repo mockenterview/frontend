@@ -342,8 +342,12 @@ const Profile = () => {
         <Col>
           <ProfilePreview selected={selection} />
         </Col>
-        
-    </Container>
+
+        <Sidebar />
+
+      </Container>
+  
+    
   );
 };
 

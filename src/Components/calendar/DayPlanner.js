@@ -19,7 +19,7 @@ import {
 
 const DayPlanner = props => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
-
+  const [user, setUser] = useState({ time: "", email: "", name: "bob" });
   const toggle = () => setDropdownOpen(prevState => !prevState);
 
   const { buttonLabel, className } = props;
@@ -51,13 +51,25 @@ const DayPlanner = props => {
     23
   ];
 
+  const handleChange = event => {
+    setUser({ ...user, [event.target.name]: event.target.value });
+  };
+
+  const handleSubmit = event => {
+    event.preventDefault();
+    console.log(user.name);
+    // console.log(user.date);
+  };
+
   const appTime = num => format(addHours(props.time, num), "h bbbb ");
+  // console.log("name:",user.name)
   return (
+    
     <div>
       <Modal isOpen={props.modals} toggle={props.toggler} className={className}>
         <ModalHeader toggle={props.toggler}>{props.date}</ModalHeader>
         <ModalBody>
-          <FormGroup>
+          <FormGroup >
             <Label for="exampleEmail">Email</Label>
             <Input
               type="email"
@@ -66,12 +78,14 @@ const DayPlanner = props => {
               placeholder="with a placeholder"
             />
 
-            <Label for="exampleDatetime">Datetime</Label>
+            <Label for="Name">Name</Label>
             <Input
-              type="datetime"
-              name="datetime"
-              id="exampleDatetime"
-              placeholder={props.date}
+              type="name"
+              name="name"
+              id="exampleName"
+              placeholder="Your Name"
+              onChange={e => handleChange(e)}
+              value={user.name}
             />
             <br />
             <Dropdown isOpen={dropdownOpen} toggle={toggle}>
@@ -98,7 +112,7 @@ const DayPlanner = props => {
               </DropdownMenu>
             </Dropdown>
             <br />
-            <Button color="primary">Submit</Button>
+            <Button color="primary" onSubmit={handleSubmit}>Submit</Button>
           </FormGroup>
         </ModalBody>
         <ModalFooter>
@@ -107,6 +121,7 @@ const DayPlanner = props => {
           </Button>
         </ModalFooter>
       </Modal>
+      
     </div>
   );
 };
