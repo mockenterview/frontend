@@ -121,6 +121,7 @@ export const Register = (props, { values, errors, touched, status }) => {
 
 					<Row>
 						<MyTextInput name="password" placeholder="Create Password"/>
+						<p style>Must be at least 8 characters long, must contain at least 1 uppercase letter, 1 lowercase letter, and 1 number </p>
 					</Row>
 {/* 
 					<Row>
