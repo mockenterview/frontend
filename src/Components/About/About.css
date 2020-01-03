@@ -10,13 +10,17 @@
 /* Welcome */
 .aInfo {
     background-color: var(--main-bg-color);
-    color: white;
+    background-image: url('/photo-1553877522-43269d4ea984.jpg');
+    background-size: 110%;
+    color: black;
     height: 600px;
     margin: 50px 0;
     display: flex;
     flex-direction: column;
     align-content: flex-start;
+    font-weight: 800;
 }
+
 .blurb {
     width: 40%;
     margin: 50px;
@@ -25,13 +29,28 @@
     margin-left: 20%;
     margin: 150px;
     width: 50%;
+    font-weight: 800;
 }
 /* 3 Points */
 .Works {
     height: 600px;
     margin: 70px 0;
+    font-weight: 800;
 
 }
+
+
+.HowItWorks-RegisterButton{
+    margin: 5% auto;
+    width:60%;
+}
+.HowItWorks-RegisterButton .btn{
+    font-size: x-large;
+    padding: 1% 0;
+    font-weight: 800;
+
+}
+
 .points {
 width: 88%;
 height: 60vh;
