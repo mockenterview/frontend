@@ -3,7 +3,7 @@ import { Button, Nav, NavItem, NavLink,Dropdown, DropdownToggle, DropdownMenu, D
 import './home-header.css';
 
 
-const Header = () => {
+const Header = props => {
 
     const [dropdownOpen, setDropdownOpen] = useState(false);
     const toggle = () => setDropdownOpen(prevState => !prevState);
@@ -18,7 +18,7 @@ const Header = () => {
             <Nav>
                 <div className='link'>
              <NavItem>
-                <NavLink href="#">Home</NavLink>
+                <NavLink href="#home">Home</NavLink>
             </NavItem>
             <Dropdown isOpen={dropdownOpen} toggle={toggle}>
                 <DropdownToggle color='link' caret >
@@ -31,18 +31,18 @@ const Header = () => {
                 </DropdownMenu>
             </Dropdown>
             <NavItem>
-                 <NavLink href="#">Employees</NavLink>
+                 <NavLink disabled href="#">Employees</NavLink>
             </NavItem>
             <NavItem>
-                 <NavLink href="#">Employers</NavLink>
+                 <NavLink disabled href="#">Employers</NavLink>
             </NavItem>
             <NavItem>
-                 <NavLink href="#">FAQ</NavLink>
+                 <NavLink disabled href="#">FAQ</NavLink>
             </NavItem> 
             </div>   
                 <div className='auth'>
-                    <Button color="primary">Login</Button>
-                    <Button color="primary">Sign Up</Button>
+                    <Button color="primary" onClick={() => props.history.push("/login")}>Login</Button>
+                    <Button color="primary" onClick={() => props.history.push("/register")}>Sign Up</Button>
                 </div>
             </Nav>
             </div>

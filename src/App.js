@@ -22,20 +22,15 @@ function App() {
    <Router>
      <div className='App'>
        <Header />
-       {/* <Route exact path='/' component ={Register} /> */}
+       <Route exact path='/register' component ={Register} />
        <Route exact path='/login' component ={Login} />
-<<<<<<< HEAD
-      <About />
-=======
+       <Route exact path='/' component={About} />
        <Route exact path='/profile' component ={Profile} />
-       <SideBar />
-    
        <Route exact path='/userDashboard' component={userDashboard} />
 
        {/* <Route exact path='/' component ={SignUp} />
        <Route exact path='/login' component ={Login} /> */}
        
->>>>>>> 7361c6154a72a0153aed637ac0dd26e7d9a4d543
       
      </div>
 
