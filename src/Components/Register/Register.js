@@ -9,7 +9,11 @@ import {
 	useField
 } from "formik";
 import * as Yup from "yup";
-import { Container, Row, Button, Alert } from "reactstrap";
+import { Container, Row, Button, Alert, Label, FormGroup, Col, Toast, ToastBody, ToastHeader } from "reactstrap";
+
+import Axios from 'axios';
+
+
 
 export const MyCheckbox = ({ children, ...props }) => {
 	const [field, meta] = useField({ ...props, type: "checkbox" });
@@ -32,7 +36,7 @@ export const MyTextInput = ({ label, ...props }) => {
 	const [field, meta] = useField(props);
 	return (
 		<>
-			<label htmlFor={props.id || props.name}>{label}</label>
+			<Label htmlFor={props.id || props.name}>{label}</Label>
 			<input className="text-input" {...field} {...props} />
 			{meta.touched && meta.error ? (
 				<div className="error">{meta.error}</div>
@@ -41,17 +45,20 @@ export const MyTextInput = ({ label, ...props }) => {
 	);
 };
 
-export const Register = ({ values, errors, touched, status }) => {
+export const Register = (props, { values, errors, touched, status }) => {
+
 	return (
-		<Container fluid="sm" className="register_wrapper">
+    <Container fluid="md"  className="reg_log_wrapper">
+      <Col >
+      <Button close href="/" />
 			<Row>
-				<h3>Sign Up</h3>
+				<h5>Sign Up</h5>
 			</Row>
 			<Row>
 				<a href="/login">Already have an account?</a>
 			</Row>
 			<Formik
-				initialValues={{ firstName: "", lastName: "", email: "" }}
+				initialValues={{ firstName: "", lastName: "", email: "", interviewer:false }}
 				validationSchema={Yup.object({
 					firstName: Yup.string()
 						.max(15, "Must be 15 characters or less")
@@ -64,14 +71,24 @@ export const Register = ({ values, errors, touched, status }) => {
 						.required(<Alert color="warning">Email Required!</Alert>),
 					password: Yup.string()
 						.min(8, "Must be more than 8 characters")
-						.required(<Alert color="warning">Password Required!</Alert>),
+            .required(<Alert color="warning">Password Required!</Alert>),
+          interviewer: Yup.boolean()
+          .oneOf([false, true]),
 					acceptedTerms: Yup.boolean()
 						.required("Required")
-						.oneOf([true], "You must accept the terms and conditions to continue")
+						.oneOf([true], <Alert color="warning">You must accept the terms and conditions to continue</Alert>)
 				})}
 				onSubmit={(values, { setSubmitting }) => {
+          Axios
+          .post(`https://mockenterview.herokuapp.com/api/register`, values)
+          .then(res => {
+            console.log("POST res", res);
+            props.history.push("/login");
+          })
+          .catch(err => console.log(err));
+
 					setTimeout(() => {
-						alert(JSON.stringify(values, null, 2));
+						console.log(JSON.stringify(values, null, 2));
 						setSubmitting(false);
 					}, 400);
 				}}
@@ -104,10 +121,16 @@ export const Register = ({ values, errors, touched, status }) => {
 					<Row>
 						<MyTextInput name="password" placeholder="Create Password"/>
 					</Row>
-
+{/* 
 					<Row>
 						<MyTextInput name="confirmPassword" placeholder="Confirm Password" />
-					</Row>
+					</Row> */}
+          
+          <Row>
+            <MyCheckbox name="interviewer" >
+            I'd Like to be an Interviewer
+            </MyCheckbox>
+          </Row>
 
 					<Row>
 						<MyCheckbox name="acceptedTerms">
@@ -115,7 +138,7 @@ export const Register = ({ values, errors, touched, status }) => {
 						</MyCheckbox>
 					</Row>
 
-					<Button type="submit" color="primary" size="lg">Submit</Button>
+					<Button type="submit" color="primary" size="lg" block>Sign Up</Button>
 				</Form>
 			</Formik>
 
@@ -125,7 +148,9 @@ export const Register = ({ values, errors, touched, status }) => {
 
 			<Row>
 				<p>Sign Up With</p>
+        <img src="src\images\kisspng-linkedin-business-marketing-social-networking-serv-company-profile-5ac8b49c8802a9.8421942815231028765571.png"></img>
 			</Row>
+      </Col>
 		</Container>
 	);
 };
