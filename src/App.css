@@ -45,6 +45,9 @@
   border-radius: 10px
 }
 
+.reg_log_wrapper .col{
+  padding: 15px 10px;
+}
 
 .text-input{
   border:1px solid lightgrey;
