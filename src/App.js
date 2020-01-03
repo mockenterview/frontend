@@ -12,6 +12,8 @@ import Calendar from './Components/calendar/Calendar'
 
 import SideBar from "./Components/Header/sideBar"
 
+import Profile from './Components/Profile/Profile'
+
 
 function App() {
   return (
@@ -21,6 +23,7 @@ function App() {
        
        <Route exact path='/' component ={Register} />
        <Route exact path='/login' component ={Login} />
+       <Route exact path='/profile' component ={Profile} />
        <SideBar />
        {/* <Route exact path='/' component ={SignUp} />
        <Route exact path='/login' component ={Login} /> */}

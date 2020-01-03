@@ -1,0 +1,29 @@
+.interview-list{
+    max-width: 400px;
+    width: 100%;
+}
+
+
+.interview-list .interviewer-card{
+    height: 80px;
+    cursor: pointer;
+
+}
+.interview-list .interviewer-card::selection{
+    box-shadow: 10px 10px 10px black;
+}
+
+.interview-list .interviewer-card .avatar{
+    height: 50px;
+    width: 50px;
+    border-radius: 100px;
+    margin: 0;
+}
+.interview-list .interviewer-card .name{
+    font-weight: bold;
+}
+.interview-list .interviewer-card .role{
+    font-size: 14px;
+    color: #a9a9a9;;
+}
+
