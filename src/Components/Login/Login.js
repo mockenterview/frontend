@@ -12,6 +12,8 @@ import * as Yup from "yup";
 
 import { MyTextInput, MyCheckbox } from "../Register/Register";
 import { Container, Row, Button, Alert, Col } from "reactstrap";
+import Axios from 'axios';
+
 
 export const Login = ({ values, errors, touched, status }) => {
 	return (
@@ -38,10 +40,19 @@ export const Login = ({ values, errors, touched, status }) => {
 						rememberMe: Yup.boolean()
 					})}
 					onSubmit={(values, { setSubmitting }) => {
-						setTimeout(() => {
-							alert(JSON.stringify(values, null, 2));
-							setSubmitting(false);
-						}, 400);
+                        Axios
+                        .post(`https://mockenterview.herokuapp.com/api/login`, values)
+                        .then(res => {
+                          console.log("POST res", res.data);
+                          localStorage.setItem("token", res.data.token);
+                          localStorage.setItem("message", res.data.message);
+                        })
+                        .catch(err => console.log(err));
+
+                        setTimeout(() => {
+                            console.log(JSON.stringify(values, null, 2));
+                            setSubmitting(false);
+                        }, 400);
 					}}
 				>
 					<Form>

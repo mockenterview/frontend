@@ -9,7 +9,9 @@ import {
 	useField
 } from "formik";
 import * as Yup from "yup";
-import { Container, Row, Button, Alert, Label, FormGroup, Col } from "reactstrap";
+import { Container, Row, Button, Alert, Label, FormGroup, Col, Toast, ToastBody, ToastHeader } from "reactstrap";
+
+import Axios from 'axios';
 
 
 
@@ -43,10 +45,11 @@ export const MyTextInput = ({ label, ...props }) => {
 	);
 };
 
-export const Register = ({ values, errors, touched, status }) => {
+export const Register = (props, { values, errors, touched, status }) => {
+
 	return (
-		<Container fluid="md" className="reg_log_wrapper">
-      <Col>
+    <Container fluid="md"  className="reg_log_wrapper">
+      <Col >
       <Button close href="/" />
 			<Row>
 				<h5>Sign Up</h5>
@@ -55,7 +58,7 @@ export const Register = ({ values, errors, touched, status }) => {
 				<a href="/login">Already have an account?</a>
 			</Row>
 			<Formik
-				initialValues={{ firstName: "", lastName: "", email: "" }}
+				initialValues={{ firstName: "", lastName: "", email: "", interviewer:false }}
 				validationSchema={Yup.object({
 					firstName: Yup.string()
 						.max(15, "Must be 15 characters or less")
@@ -69,15 +72,23 @@ export const Register = ({ values, errors, touched, status }) => {
 					password: Yup.string()
 						.min(8, "Must be more than 8 characters")
             .required(<Alert color="warning">Password Required!</Alert>),
-          role: Yup.boolean()
-          .oneOf([false], 'Please Select one'),
+          interviewer: Yup.boolean()
+          .oneOf([false, true]),
 					acceptedTerms: Yup.boolean()
 						.required("Required")
 						.oneOf([true], <Alert color="warning">You must accept the terms and conditions to continue</Alert>)
 				})}
 				onSubmit={(values, { setSubmitting }) => {
+          Axios
+          .post(`https://mockenterview.herokuapp.com/api/register`, values)
+          .then(res => {
+            console.log("POST res", res);
+            props.history.push("/login");
+          })
+          .catch(err => console.log(err));
+
 					setTimeout(() => {
-						alert(JSON.stringify(values, null, 2));
+						console.log(JSON.stringify(values, null, 2));
 						setSubmitting(false);
 					}, 400);
 				}}
@@ -110,13 +121,13 @@ export const Register = ({ values, errors, touched, status }) => {
 					<Row>
 						<MyTextInput name="password" placeholder="Create Password"/>
 					</Row>
-
+{/* 
 					<Row>
 						<MyTextInput name="confirmPassword" placeholder="Confirm Password" />
-					</Row>
+					</Row> */}
           
           <Row>
-            <MyCheckbox name="role">
+            <MyCheckbox name="interviewer" >
             I'd Like to be an Interviewer
             </MyCheckbox>
           </Row>
