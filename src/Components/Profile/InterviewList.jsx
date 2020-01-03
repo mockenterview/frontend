@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { ListGroup, ListGroupItem } from "reactstrap";
 
 import InterviewerCard from "./InterviewerCard";
-import SeachForm from './SearchForm'
 import SearchForm from "./SearchForm";
 
 const InterviewList = ({interviewers, selectProfile, selected, filteredData, search}) => {

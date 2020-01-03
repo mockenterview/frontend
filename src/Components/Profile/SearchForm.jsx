@@ -25,7 +25,9 @@ export default function SearchForm(props) {
           type="text"
           name="interviewer"
           id="interviewer"
-          placeholder="Search"
+          placeholder="Press 'Enter' to search"
+          autocomplete="off"
+          
         ></input>
       </form>
     </section>
