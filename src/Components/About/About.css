@@ -2,9 +2,14 @@
     font-family: 'Dosis', sans-serif;
 }
 
+:root {
+    --main-bg-color: #134663;
+  }
+
+
 /* Welcome */
 .aInfo {
-    background-color: #1E4588;
+    background-color: var(--main-bg-color);
     color: white;
     height: 600px;
     margin: 50px 0;
@@ -25,6 +30,7 @@
 .Works {
     height: 600px;
     margin: 70px 0;
+
 }
 .points {
 width: 88%;
@@ -33,9 +39,11 @@ margin: 50px auto ;
 display: flex;
 justify-content: space-evenly;
 align-content: flex-start;
-background-color: thistle;
-border-radius: 5%;
-filter: drop-shadow(0 1rem 0.75rem rgba(41, 3, 34, 0.747));
+background-image: url("C:\Users\derek\Documents\GitStuff\hackathon\frontend\src\images\desktop image.jpg");
+background-color: #13466393;
+background-size: 120%;
+border-radius: 10px;
+filter: drop-shadow(0 1rem 0.75rem rgba(41, 3, 34, 0.192));
 }
 .point {
     margin: 30px;
@@ -44,6 +52,11 @@ filter: drop-shadow(0 1rem 0.75rem rgba(41, 3, 34, 0.747));
     flex-direction: column;
     justify-content: flex-start;
     align-content: flex-start;
+    background-color: #13466379;
+    color: aliceblue;
+    padding:5px;
+    border-radius: 5px;
+
 }
 .point-header {
     font-size: 1.5rem;
@@ -55,7 +68,7 @@ button {
 }
 /* MIssion */
 .mission {
-    background-color: #1E4588;
+    background-color: var(--main-bg-color);
     color: white;
     height: 600px;
     margin: 100px 0;
@@ -99,7 +112,7 @@ button {
     font-size: 1rem;
 }
 .title {
-    background-color: #1E4588;
+    background-color: var(--main-bg-color);
     color: white;
     height: 20vh;
     font-size: 2rem;
@@ -107,7 +120,7 @@ button {
     margin: 50px 0;
 }
 .Person {
-    background-color:#1E4588;
+    background-color:var(--main-bg-color);
     color: white;
     width: 200px;
     height: 200px;
@@ -131,14 +144,14 @@ button {
     align-items: baseline;
     font-family: 'Roboto', sans-serif;
     margin: 30px 0;
-    background-color: #3682BD;
+    background-color: var(--main-bg-color);
     color: white;
 }
 
 .logoFoot {
     font-size: 2rem;
     font-family: 'Sigmar One', cursive;
-    color: #1E4588;
+    color: var(--main-bg-color);
     width: 20%;
     margin-right: 30px;
 }
