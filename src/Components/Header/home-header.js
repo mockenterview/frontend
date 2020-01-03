@@ -25,9 +25,9 @@ const Header = () => {
                     About
                 </DropdownToggle>
                 <DropdownMenu>
-                    <DropdownItem href="#">How It Works</DropdownItem>
-                    <DropdownItem href="#">Our Team</DropdownItem>
-                    <DropdownItem href="#">COntact</DropdownItem>
+                    <DropdownItem href="#works">How It Works</DropdownItem>
+                    <DropdownItem href="#team">Our Team</DropdownItem>
+                    <DropdownItem href="#contact">Contact</DropdownItem>
                 </DropdownMenu>
             </Dropdown>
             <NavItem>

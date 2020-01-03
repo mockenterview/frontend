@@ -3,7 +3,7 @@ import { Button } from 'reactstrap';
 
 const HowWorks = () => {
     return (
-        <div className='Works'>
+        <div className='Works'id='works'>
             <h2>How It Works</h2>
             <div className='points'>
                 <div className='point'>
@@ -25,6 +25,7 @@ const HowWorks = () => {
                    </div>
                 </div>
             </div>
+           <div className='button'></div>
             <Button color='primary'>Sign Up</Button>
         </div>
     )
