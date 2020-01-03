@@ -14,6 +14,7 @@ export default function ProfilePreview({ selected }) {
        })}
       </div>
       <div className="bio">{selected.bio}</div>
+      <div className="availability">Availability goes here</div>
       <div className="profile-button">Full Profile</div>
     </div>
   );

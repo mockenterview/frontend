@@ -80,7 +80,17 @@
 }
 
 
+.profile-preview .availability{
+    margin: 20px 0;
+}
 
-.profile-preview .profile.button{
-    
+.profile-preview .profile-button{
+    background: #1E4588;
+    color: white;
+    display: inline-block;
+    padding: 5px 5px;
+    margin: 10px 0;
+    cursor: pointer;
+
+
 }
