@@ -40,6 +40,33 @@
 
 /* Registration & Login */
 
-.register_wrapper{
-  border:1px solid black
+.TestLog{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reg_log_wrapper{
+  border:1px solid black;
+  border-radius: 10px;
+  width: 25%;
+  align-items: center;
+  margin:0;
+}
+
+.reg_log_wrapper .col{
+  padding: 15px 10px;
+}
+
+.text-input{
+  border:1px solid lightgrey;
+  border-radius: 3px;
+  margin: 3px 0;
+  font-size: small;
+  padding:3px;
+  width: 100%;
+}
+
+.row{
+  margin:0 !important;
 }

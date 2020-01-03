@@ -6,7 +6,7 @@ import "./calendar.css";
 
 const Calendar = props => {
   const [currentDate, setCurrentDate] = useState(new Date());
-  const [selectedDate, setSelectedDate] = useState(new Date());
+  // const [selectedDate, setSelectedDate] = useState(new Date());
 
   return (
     <div className="calendar">

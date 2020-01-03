@@ -5,6 +5,7 @@ import './GroupCard.css';
 const GroupCards = () => {
     return (
         <div className='Igroups'>
+            {/* need to map over skill groups */}
             <div className='cardGroup'>
             <Card body>
                 <CardTitle>Skill Group</CardTitle>

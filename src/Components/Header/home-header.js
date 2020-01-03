@@ -1,51 +1,59 @@
 import React, {useState} from 'react'
-import { Button, Nav, NavItem, NavLink,Dropdown, DropdownToggle, DropdownMenu, DropdownItem  } from 'reactstrap';
+import { Button,Navbar, Nav, NavItem, NavLink,Dropdown, DropdownToggle, DropdownMenu, DropdownItem  } from 'reactstrap';
 import './home-header.css';
+import { Redirect } from 'react-router-dom';
+
+import {Login} from "../Login/Login"
+import {Register} from "../Register/Register"
 
 
-const Header = () => {
+const Header = props => {
 
     const [dropdownOpen, setDropdownOpen] = useState(false);
     const toggle = () => setDropdownOpen(prevState => !prevState);
 
     
     return (
-        <div className='header'>
-            <div className='logo'>
-                MockEnterView
+        <div>
+        <Navbar className='header'>
+
+            <div>
+               <a href="/" className='logo'> MockEnterView </a>
             </div>
+
             <div className='nav'>
             <Nav>
                 <div className='link'>
              <NavItem>
-                <NavLink href="#">Home</NavLink>
+                <NavLink href="/">Home</NavLink>
             </NavItem>
             <Dropdown isOpen={dropdownOpen} toggle={toggle}>
                 <DropdownToggle color='link' caret >
                     About
                 </DropdownToggle>
                 <DropdownMenu>
-                    <DropdownItem href="#">How It Works</DropdownItem>
-                    <DropdownItem href="#">Our Team</DropdownItem>
-                    <DropdownItem href="#">COntact</DropdownItem>
+                    <DropdownItem href="/#works">How It Works</DropdownItem>
+                    <DropdownItem href="/#team">Our Team</DropdownItem>
+                    <DropdownItem href="/#contact">Contact</DropdownItem>
                 </DropdownMenu>
             </Dropdown>
             <NavItem>
-                 <NavLink href="#">Employees</NavLink>
+                 <NavLink href="/#mission">Mission</NavLink>
+            </NavItem>
+            {/* <NavItem>
+                 <NavLink disabled href="#">Employees</NavLink>
             </NavItem>
             <NavItem>
-                 <NavLink href="#">Employers</NavLink>
-            </NavItem>
-            <NavItem>
-                 <NavLink href="#">FAQ</NavLink>
-            </NavItem> 
+                 <NavLink disabled href="#">FAQ</NavLink>
+            </NavItem>  */}
             </div>   
                 <div className='auth'>
-                    <Button color="primary">Login</Button>
-                    <Button color="primary">Sign Up</Button>
+                    <Button color="info" href="/login">Login</Button>
+                    <Button color="info" href="/register" >Sign Up</Button>
                 </div>
             </Nav>
             </div>
+        </Navbar>
         </div>
     )
 }
