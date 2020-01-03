@@ -9,7 +9,7 @@ import {Register} from "./Components/Register/Register"
 // style imports
 import Header from "./Components/Header/home-header"
 import Calendar from './Components/calendar/Calendar'
-
+import Groups from "./Components/Interviews/GroupCards"
 import SideBar from "./Components/Header/sideBar"
 
 
@@ -18,13 +18,17 @@ function App() {
    <Router>
      <div className='App'>
        <Header />
-       
-       <Route exact path='/' component ={Register} />
+       {/* <Route exact path='/' component ={Register} /> */}
        <Route exact path='/login' component ={Login} />
+       <Groups />
        <SideBar />
+<<<<<<< HEAD
        {/* <Route exact path='/' component ={SignUp} />
        <Route exact path='/login' component ={Login} /> */}
        <Calendar/>
+=======
+      
+>>>>>>> 1270af18c6526b45b2a32c924a3b78a9d87098bf
      </div>
 
    </Router>
