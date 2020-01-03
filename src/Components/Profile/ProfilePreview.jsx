@@ -4,8 +4,7 @@ import Calendar from '../calendar/Calendar'
 
 
 
-export default function ProfilePreview({ selected }) {
-
+export default function ProfilePreview({ selected, props }) {
   const {
     buttonLabel,
     className
@@ -28,21 +27,14 @@ export default function ProfilePreview({ selected }) {
            )
        })}
       </div>
-      
-    
       <div className="bio">{selected.bio}</div>
-      <div className="availability" onClick={() => setModal(true)}>CAL ICON
-      <Button color="primary" onClick={toggle}>{buttonLabel}</Button>
-          <Modal isOpen={modal} toggle={toggle} className={className}>
-            <ModalHeader toggle={toggle}>Availability</ModalHeader>
-            <ModalBody>
-              <Calendar />
-            </ModalBody>
-            <ModalFooter>
-              <Button color='primary'>Schedule</Button>
-            </ModalFooter>
-          </Modal>
+
+      <div className="availability">
+
+      <i class="fa fa-calendar"></i> Calendar
+        
       </div>
+      
       <div className="profile-button">Feedback</div>
       </div>
     

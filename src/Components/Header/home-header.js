@@ -15,14 +15,16 @@ const Header = props => {
     
     return (
         <Navbar className='header'>
-            <div className='logo'>
-                MockEnterView
+
+            <div>
+               <a href="/" className='logo'> MockEnterView </a>
             </div>
+
             <div className='nav'>
             <Nav>
                 <div className='link'>
              <NavItem>
-                <NavLink href="#home">Home</NavLink>
+                <NavLink href="/">Home</NavLink>
             </NavItem>
             <Dropdown isOpen={dropdownOpen} toggle={toggle}>
                 <DropdownToggle color='link' caret >
@@ -45,8 +47,8 @@ const Header = props => {
             </NavItem> 
             </div>   
                 <div className='auth'>
-                    <Button color="primary" onClick={<Redirect to={Login} /> }>Login</Button>
-                    <Button color="primary" onClick={<Redirect to={Register} />}>Sign Up</Button>
+                    <Button color="primary" href="/login">Login</Button>
+                    <Button color="primary" href="/register" >Sign Up</Button>
                 </div>
             </Nav>
             </div>
