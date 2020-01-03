@@ -15,10 +15,10 @@ import { Container, Row, Button, Alert, Col } from "reactstrap";
 import Axios from 'axios';
 
 
-export const Login = ({ values, errors, touched, status }) => {
+export const Login = (props, { values, errors, touched, status }) => {
 	return (
-		<div className="reg_log_wrapper">
-		<Container fluid >
+		<div className="TestLog" >
+		<Container fluid="xs" className="reg_log_wrapper">
 			<Button close />
 			<Col>
 				<Row>
@@ -46,7 +46,8 @@ export const Login = ({ values, errors, touched, status }) => {
                         .then(res => {
                           console.log("POST res", res.data);
                           localStorage.setItem("token", res.data.token);
-                          localStorage.setItem("message", res.data.message);
+						  localStorage.setItem("message", res.data.message);
+						  props.history.push("/userDashboard");
                         })
                         .catch(err => console.log(err));
 

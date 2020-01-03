@@ -11,6 +11,7 @@ import Header from "./Components/Header/home-header"
 import About from "./Components/About/About"
 import userDashboard from "./Components/User/UserDashboard"
 import Profile from './Components/Profile/Profile'
+import PrivateRoute from "./Components/Routes/Private";
 
 
 function App() {
@@ -28,7 +29,7 @@ function App() {
        <Route exact path='/register' component ={Register} />
        
        <Route exact path='/profile' component ={Profile} />
-       <Route exact path='/userDashboard' component={userDashboard} />
+       <PrivateRoute exact path='/userDashboard' component={userDashboard} />
 
        
       
