@@ -42,7 +42,8 @@
 
 .reg_log_wrapper{
   border:1px solid black;
-  border-radius: 10px
+  border-radius: 10px;
+  width: 25%;
 }
 
 .reg_log_wrapper .col{
