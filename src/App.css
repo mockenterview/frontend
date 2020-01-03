@@ -44,6 +44,7 @@
   border:1px solid black;
   border-radius: 10px;
   width: 25%;
+  align-items: center;
 }
 
 .reg_log_wrapper .col{
