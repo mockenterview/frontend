@@ -24,8 +24,8 @@ function App() {
        <Header />
        <Route exact path='/' component={About} />
        <Route exact path='/login' component ={Login} />
-       <Groups />
-       <SideBar />
+       {/* <Groups />
+       <SideBar /> */}
        {/* <Route exact path='/' component ={SignUp} />
        <Route exact path='/login' component ={Login} /> */}
       
