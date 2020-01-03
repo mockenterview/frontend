@@ -11,6 +11,7 @@ import Header from "./Components/Header/home-header"
 import Calendar from './Components/calendar/Calendar'
 import Groups from "./Components/Interviews/GroupCards"
 import SideBar from "./Components/Header/sideBar"
+import About from "./Components/About/About"
 
 
 function App() {
@@ -20,8 +21,7 @@ function App() {
        <Header />
        {/* <Route exact path='/' component ={Register} /> */}
        <Route exact path='/login' component ={Login} />
-       <Groups />
-       <SideBar />
+      <About />
       
      </div>
 
