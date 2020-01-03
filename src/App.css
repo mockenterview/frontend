@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 }
+
+
+/* Registration & Login */
+
+.register_wrapper{
+  border:1px solid black
+}
