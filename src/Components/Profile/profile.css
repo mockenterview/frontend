@@ -28,6 +28,10 @@
 }
 
 .interview-list .interviewer-card .avatar{
+    border-radius: 100px;
+    background-position: center;
+    background: url('/mev.png');
+    background-size: cover;
     height: 50px;
     width: 50px;
     border-radius: 100px;
@@ -74,8 +78,8 @@
     height: 100px;
     width: 100px;
     border-radius: 100px;
-    background: url('https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2018/01/12201051/cute-puppy-body-image.jpg');
     background-position: center;
+    background: url('/mev.png');
     background-size: cover;
     margin: 0 auto;
 }

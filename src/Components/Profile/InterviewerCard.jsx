@@ -11,7 +11,7 @@ export default function InterviewerCard({interviewer, selectProfile, selected}){
             <Container>
             <Row>
                 <Col xs="3" >
-                    <img className="avatar" src={interviewer.image} alt="Profile Image"/>
+                    <div className="avatar" ></div>
                 </Col>
                 <Col xs="7" >
                 <Row>
