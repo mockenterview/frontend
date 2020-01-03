@@ -9,7 +9,7 @@ import {Register} from "./Components/Register/Register"
 // style imports
 import Header from "./Components/Header/home-header"
 import Calendar from './Components/calendar/Calendar'
-
+import Groups from "./Components/Interviews/GroupCards"
 import SideBar from "./Components/Header/sideBar"
 
 
@@ -20,6 +20,7 @@ function App() {
        <Header />
        {/* <Route exact path='/' component ={Register} /> */}
        <Route exact path='/login' component ={Login} />
+       <Groups />
        <SideBar />
       
      </div>

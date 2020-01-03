@@ -29,8 +29,7 @@ const Header = () => {
                     <DropdownItem href="#">Our Team</DropdownItem>
                     <DropdownItem href="#">COntact</DropdownItem>
                 </DropdownMenu>
-    </Dropdown>
-
+            </Dropdown>
             <NavItem>
                  <NavLink href="#">Employees</NavLink>
             </NavItem>
