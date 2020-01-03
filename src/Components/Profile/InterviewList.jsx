@@ -9,9 +9,9 @@ const InterviewList = ({interviewers, selectProfile, selected, filteredData, sea
  
 
   return (
-    <div className="interview-list">
+    <div className="interviewers">
         <SearchForm search={search} data={interviewers} />
-      <ListGroup>
+      <ListGroup  className="interview-list">
 
         {filteredData.map(el => {
           return <InterviewerCard interviewer={el} key={el.firstName} selectProfile={selectProfile} selected={selected} />;
