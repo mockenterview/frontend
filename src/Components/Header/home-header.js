@@ -1,27 +1,52 @@
-import React from 'react'
-import { Link } from "react-router-dom"
+import React, {useState} from 'react'
+import { Button, Nav, NavItem, NavLink,Dropdown, DropdownToggle, DropdownMenu, DropdownItem  } from 'reactstrap';
 import './home-header.css';
-const header = () => {
+
+
+const Header = () => {
+
+    const [dropdownOpen, setDropdownOpen] = useState(false);
+    const toggle = () => setDropdownOpen(prevState => !prevState);
+
+    
     return (
         <div className='header'>
             <div className='logo'>
                 MockEnterView
             </div>
-            <nav>
+            <div className='nav'>
+            <Nav>
                 <div className='link'>
-                    <a>Home</a>
-                {/* need links to deployed pages */}
-                    <a>About</a>
-                {/* Need links to about page */}
-                    <a>For Employees</a>
-                    <a>FAQ</a>
-                </div>
+             <NavItem>
+                <NavLink href="#">Home</NavLink>
+            </NavItem>
+            <Dropdown isOpen={dropdownOpen} toggle={toggle}>
+                <DropdownToggle color='link' caret >
+                    About
+                </DropdownToggle>
+                <DropdownMenu>
+                    <DropdownItem href="#">How It Works</DropdownItem>
+                    <DropdownItem href="#">Our Team</DropdownItem>
+                    <DropdownItem href="#">COntact</DropdownItem>
+                </DropdownMenu>
+            </Dropdown>
+            <NavItem>
+                 <NavLink href="#">Employees</NavLink>
+            </NavItem>
+            <NavItem>
+                 <NavLink href="#">Employers</NavLink>
+            </NavItem>
+            <NavItem>
+                 <NavLink href="#">FAQ</NavLink>
+            </NavItem> 
+            </div>   
                 <div className='auth'>
-                    <Link to='/login'>Login</Link>
-                    <Link to='/'>Sign Up</Link>
+                    <Button color="primary">Login</Button>
+                    <Button color="primary">Sign Up</Button>
                 </div>
-            </nav>
+            </Nav>
+            </div>
         </div>
     )
 }
-export default header
+export default Header

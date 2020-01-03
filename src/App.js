@@ -9,8 +9,9 @@ import {Register} from "./Components/Register/Register"
 // style imports
 import Header from "./Components/Header/home-header"
 import Calendar from './Components/calendar/Calendar'
-
+import Groups from "./Components/Interviews/GroupCards"
 import SideBar from "./Components/Header/sideBar"
+import userDashboard from "./Components/UserDashboard"
 
 import Profile from './Components/Profile/Profile'
 
@@ -20,13 +21,17 @@ function App() {
    <Router>
      <div className='App'>
        <Header />
-       
-       <Route exact path='/' component ={Register} />
+       {/* <Route exact path='/' component ={Register} /> */}
        <Route exact path='/login' component ={Login} />
        <Route exact path='/profile' component ={Profile} />
        <SideBar />
+    
+       <Route exact path='/userDashboard' component={userDashboard} />
+
        {/* <Route exact path='/' component ={SignUp} />
        <Route exact path='/login' component ={Login} /> */}
+       
+      
      </div>
 
    </Router>
