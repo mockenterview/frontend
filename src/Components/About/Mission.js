@@ -6,7 +6,7 @@ const Mission = () => {
     const [jobsCount, setJobsCount] = React.useState(80000)
 
     return (
-        <div className='mission'>
+        <div className='mission' id='mission'>
             <div className='blurb'>
                 <h2>Practice. Guide. Discover.</h2>
             </div>

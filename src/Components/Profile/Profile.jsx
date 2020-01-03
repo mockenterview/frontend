@@ -5,6 +5,7 @@ import "./profile.css";
 // Components
 import InterviewList from "../Profile/InterviewList";
 import ProfilePreview from "../Profile/ProfilePreview";
+import Sidebar from "../Header/sideBar"
 
 const Profile = () => {
   const [interviewers, setInterviewers] = useState([
@@ -341,6 +342,9 @@ const Profile = () => {
         </Col>
         <Col xs="12" sm="12" md="5">
           <ProfilePreview selected={selection} />
+        </Col>
+        <Col>
+        <Sidebar />
         </Col>
       </Row>
     </div>

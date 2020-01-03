@@ -5,11 +5,14 @@
    justify-content: space-between;
    align-items: baseline;
    font-family: 'Roboto', sans-serif;
+   background-color: white;
+  
+   
 }
 
 .logo {
     font-size: 2rem;
-    font-family: 'Sigmar One', cursive;
+    font-family: 'Josefin Sans', sans-serif;
     color: #1E4588;
     margin: 10px, 5px, 5px, 5px;
     width: 20%;

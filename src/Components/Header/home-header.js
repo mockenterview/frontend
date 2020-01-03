@@ -31,10 +31,10 @@ const Header = props => {
                 </DropdownMenu>
             </Dropdown>
             <NavItem>
-                 <NavLink disabled href="#">Employees</NavLink>
+                 <NavLink href="#mission">Mission</NavLink>
             </NavItem>
             <NavItem>
-                 <NavLink disabled href="#">Employers</NavLink>
+                 <NavLink disabled href="#">Employees</NavLink>
             </NavItem>
             <NavItem>
                  <NavLink disabled href="#">FAQ</NavLink>
