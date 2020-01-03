@@ -7,8 +7,10 @@ background: #1E4588;
 color: #ffffff;
 font-size:  1.2rem;
 font-family: 'Roboto', sans-serif;
+text-align: left;
+padding: 2rem ;
 
-/* width: 40%; */
+width:25%;
 }
 
 /*

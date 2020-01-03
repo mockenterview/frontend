@@ -7,7 +7,6 @@ import {
 	NavbarBrand,
 	Nav,
 	NavItem,
-	NavLink,
 	UncontrolledDropdown,
 	DropdownToggle,
 	DropdownMenu,
@@ -16,10 +15,12 @@ import {
 	Row
 } from "reactstrap";
 
+import { NavLink, Link } from "react-router-dom";
+
 import "./sideBar.css";
 
 const SideBar = props => {
-    // Handles the state of whether "Tools" Nav is collapsed or expanded.
+    // Handles the state of whether "Tools" Nav is collapsed or expanded
 	const [isOpen, setIsOpen] = useState(true);
 	const toggle = () => setIsOpen(!isOpen);
 
@@ -32,7 +33,7 @@ const SideBar = props => {
 				<div className="avatar">
 					<div className="round"></div>
 					<NavItem>
-						<NavLink href="#">UserName</NavLink>
+						<NavLink to="#">UserName</NavLink>
 					</NavItem>
 					<p>User@email.com</p>
 				</div>
@@ -41,14 +42,14 @@ const SideBar = props => {
 					Interviews 
 				</p>
 					<NavItem>
-						<NavLink href="#">
+						<NavLink to="#">
 							{" "}
 							<i class="fa fa-clock-o" /> Schedule New
 						</NavLink>
 					</NavItem>
 
 					<NavItem>
-						<NavLink href="#">
+						<NavLink to="#">
 							<i class="fa fa-list-alt" /> Interview{" "}
 						</NavLink>
 					</NavItem>
@@ -61,23 +62,23 @@ const SideBar = props => {
 					</p>
 					<Collapse isOpen={isOpen}>
 						<NavItem>
-							<NavLink href="#">
+							<NavLink to="#">
 								<i class="fa fa-calendar"></i> Calendar
 							</NavLink>
 						</NavItem>
 						<NavItem>
-							<NavLink disabled href="#">
+							<NavLink disabled to="#">
 								<i class="fa fa-address-card-o"></i> Contacts
 							</NavLink>
 						</NavItem>
 						<NavItem>
-							<NavLink href="#">
+							<NavLink to="#">
 								{" "}
 								<i class="fa fa-bell-o"></i> Reminders
 							</NavLink>
 						</NavItem>
 						<NavItem>
-							<NavLink href="#">
+							<NavLink to="#">
 								{" "}
 								<i class="fa fa-pie-chart"></i> Feedback
 							</NavLink>
