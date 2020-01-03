@@ -22,13 +22,10 @@ function App() {
        <Route exact path='/login' component ={Login} />
        <Groups />
        <SideBar />
-<<<<<<< HEAD
        {/* <Route exact path='/' component ={SignUp} />
        <Route exact path='/login' component ={Login} /> */}
-       <Calendar/>
-=======
+       
       
->>>>>>> 1270af18c6526b45b2a32c924a3b78a9d87098bf
      </div>
 
    </Router>
