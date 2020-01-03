@@ -18,6 +18,10 @@
     width: 20%;
 }
 
+.logo a:hover{
+    text-decoration: none;
+}
+
 .nav {
     display: flex;
     justify-content: space-between;
