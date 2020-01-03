@@ -9,14 +9,17 @@ import {
   isSameMonth,
   isSameDay,
   parse,
-  addDays
+  addDays,
+  addHours
 } from "date-fns";
 
 const Cells = props => {
   const [selectedDate, setSelectedDate] = useState(new Date());
   const [modal, setModal] = useState(false);
 
-  const toggle = () => setModal(!modal);
+  const toggle = () =>{
+    console.log(addHours(selectedDate, 1))
+    setModal(!modal)};
 
   const monthStart = startOfMonth(props.currDate);
   const monthEnd = endOfMonth(monthStart);
@@ -27,6 +30,7 @@ const Cells = props => {
   let days = [];
   let day = startDate;
   let formattedDate = "";
+  let hours = selectedDate
   const onDateClick = day => {
     setSelectedDate(day);
   };
@@ -61,7 +65,8 @@ const Cells = props => {
       <div className="row" key={day}>
         {" "}
         {days} 
-        <DayPlanner toggler={toggle} modals={modal}  date = {format(selectedDate, 'MMMM d yyyy')}/>
+        <DayPlanner toggler={toggle} modals={modal}  date = {format(selectedDate, 'MMMM d yyyy ')} time = {selectedDate}/>
+
       </div>
     );
     days = [];

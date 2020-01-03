@@ -20,6 +20,11 @@ function App() {
        <Header />
        <Route exact path='/' component={About} />
        <Route exact path='/login' component ={Login} />
+       <Groups />
+       <SideBar />
+       {/* <Route exact path='/' component ={SignUp} />
+       <Route exact path='/login' component ={Login} /> */}
+      
        <Route exact path='/register' component ={Register} />
        
        <Route exact path='/profile' component ={Profile} />
