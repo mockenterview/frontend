@@ -1,4 +1,6 @@
 import React, {useState} from 'react';
+import { Row, Col } from "reactstrap";
+
 
 import './profile.css'
 // Components
@@ -66,11 +68,24 @@ const Profile = () =>{
           ]
       );
 
+          const [selection, setSelection] = useState({})
+
+      function selectProfile(){
+
+      }
+
     return (
         <div className="profile">
+            <Row>
+            <Col md="3">
             <InterviewList interviewers={interviewers} />
-            <ProfilePreview />
+            </Col>
+            <Col md="5">
+            <ProfilePreview selected={selection}/>
+            </Col>
             
+
+            </Row>
         </div>
     );
 
