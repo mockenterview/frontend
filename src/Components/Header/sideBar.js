@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 
 import {
 	Collapse,
@@ -7,66 +7,87 @@ import {
 	NavbarBrand,
 	Nav,
 	NavItem,
-	NavLink,
 	UncontrolledDropdown,
 	DropdownToggle,
 	DropdownMenu,
 	DropdownItem,
-	NavbarText
+	NavbarText,
+	Row
 } from "reactstrap";
+
+import { NavLink, Link } from "react-router-dom";
 
 import "./sideBar.css";
 
-const sideBar = (props) => {
+const SideBar = props => {
+    // Handles the state of whether "Tools" Nav is collapsed or expanded
+	const [isOpen, setIsOpen] = useState(true);
+	const toggle = () => setIsOpen(!isOpen);
 
-    // const [isOpen, setIsOpen] = useState(false);
-
-    // const toggle = () => setIsOpen(!isOpen);
+	const [isInterviewOpen, setIsInterviewOpen] = useState(true);
+	const toggleInt = () => setIsInterviewOpen(!isInterviewOpen);
 
 	return (
 		<div className="sidebar">
 			<Nav vertical>
 				<div className="avatar">
 					<div className="round"></div>
-                    <NavItem>
-					<NavLink href="#">UserName</NavLink>
-				</NavItem>
+					<NavItem>
+						<NavLink to="#">UserName</NavLink>
+					</NavItem>
 					<p>User@email.com</p>
 				</div>
-			</Nav>
-			<br />
-			<Nav vertical>
-				<p>INTERVIEWS</p>
-				<NavItem>
-					<NavLink href="#">Schedule New</NavLink>
-				</NavItem>
+				<br />
+				<p >
+					Interviews 
+				</p>
+					<NavItem>
+						<NavLink to="#">
+							{" "}
+							<i class="fa fa-clock-o" /> Schedule New
+						</NavLink>
+					</NavItem>
 
-				<NavItem>
-					<NavLink href="#">Interview </NavLink>
-				</NavItem>
-			</Nav>
+					<NavItem>
+						<NavLink to="#">
+							<i class="fa fa-list-alt" /> Interview{" "}
+						</NavLink>
+					</NavItem>
+				<br />
 
-			<br />
-
-			<Nav vertical>
-				<p > TOOLS</p>
-                {/* <Collapse isOpen={isOpen}> */}
-				<NavItem>
-					<NavLink href="#">Calendar</NavLink>
-				</NavItem>
-				<NavItem>
-					<NavLink disabled href="#">Contacts</NavLink>
-				</NavItem>
-				<NavItem>
-					<NavLink href="#">Reminders</NavLink>
-				</NavItem>
-				<NavItem>
-					<NavLink href="#">Feedback</NavLink>
-				</NavItem>
-                {/* </Collapse> */}
+				<div>
+					<p onClick={toggle}>
+						{" "}
+						TOOLS <i class="fa fa-chevron-down" />
+					</p>
+					<Collapse isOpen={isOpen}>
+						<NavItem>
+							<NavLink to="#">
+								<i class="fa fa-calendar"></i> Calendar
+							</NavLink>
+						</NavItem>
+						<NavItem>
+							<NavLink disabled to="#">
+								<i class="fa fa-address-card-o"></i> Contacts
+							</NavLink>
+						</NavItem>
+						<NavItem>
+							<NavLink to="#">
+								{" "}
+								<i class="fa fa-bell-o"></i> Reminders
+							</NavLink>
+						</NavItem>
+						<NavItem>
+							<NavLink to="#">
+								{" "}
+								<i class="fa fa-pie-chart"></i> Feedback
+							</NavLink>
+						</NavItem>
+					</Collapse>
+				</div>
 			</Nav>
 		</div>
 	);
 };
 
-export default sideBar;
+export default SideBar;

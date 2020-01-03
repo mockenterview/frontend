@@ -9,19 +9,17 @@ import SideBar from "../Header/sideBar"
 function UserDashboard() {
 
     return (
-    <Container>
-        <Col>
-        {/* <Groups /> */}
-        </Col>
+    <>
+        <Container className="wrapper">
+            <Row>
+                <Groups />
 
-        <Col>
-            <SideBar />
-        </Col>
+                    <Calendar />
 
-        <Col>
-            {/* <Calendar /> */}
-        </Col>
-    </Container>
+                    <SideBar />
+            </Row>
+        </Container>
+    </>
     );
 }
 
