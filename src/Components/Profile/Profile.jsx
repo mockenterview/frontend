@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Row, Col } from "reactstrap";
+import { Container, Col } from "reactstrap";
 
 import "./profile.css";
 // Components
@@ -329,9 +329,8 @@ const Profile = () => {
   }
 
   return (
-    <div className="profile">
-      <Row>
-        <Col xs="12" sm="12" md="4">
+    <Container className='profile'>
+      <Col>
           <InterviewList
             interviewers={interviewers}
             selectProfile={selectProfile}
@@ -340,14 +339,13 @@ const Profile = () => {
             search={search}
           />
         </Col>
-        <Col xs="12" sm="12" md="5">
+        <Col>
           <ProfilePreview selected={selection} />
         </Col>
         <Col>
         <Sidebar />
         </Col>
-      </Row>
-    </div>
+      </Container>
   );
 };
 
