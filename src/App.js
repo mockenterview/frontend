@@ -24,6 +24,7 @@ function App() {
        <SideBar />
        {/* <Route exact path='/' component ={SignUp} />
        <Route exact path='/login' component ={Login} /> */}
+       <Calendar/>
      </div>
 
    </Router>
