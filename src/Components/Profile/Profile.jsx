@@ -344,14 +344,9 @@ const Profile = () => {
         </Col>
 
         <Sidebar />
-<<<<<<< HEAD
-        </Col>
-      </Container>
-=======
 
-      </Row>
-    </div>
->>>>>>> e5aed2f2cfbfa5fe71be32316a7e5ea1654e7df0
+      </Container>
+  
   );
 };
 
