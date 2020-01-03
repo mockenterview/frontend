@@ -70,17 +70,17 @@ const Profile = () =>{
 
           const [selection, setSelection] = useState({})
 
-      function selectProfile(){
-
-      }
+      function selectProfile(e){
+        setSelection(e)
+    }
 
     return (
         <div className="profile">
             <Row>
             <Col md="3">
-            <InterviewList interviewers={interviewers} />
+            <InterviewList interviewers={interviewers} selectProfile={selectProfile}  />
             </Col>
-            <Col md="5">
+            <Col md="3">
             <ProfilePreview selected={selection}/>
             </Col>
             

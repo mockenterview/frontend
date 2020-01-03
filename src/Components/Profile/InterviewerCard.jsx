@@ -4,26 +4,25 @@ import { Container, Row, Col, ListGroupItem } from 'reactstrap';
 
 import './profile.css'
 
-export default function InterviewerCard(props){
-    console.log(props.name)
+export default function InterviewerCard({interviewer, selectProfile}){
     return (
-        <div className="interviewer-card">
+        <div className="interviewer-card" onClick={()=>{selectProfile(interviewer)}}>
         
             <ListGroupItem>
             <Container>
             <Row>
                 <Col xs="3">
-                    <img className="avatar" src={props.interviewer.image} alt="Profile Image"/>
+                    <img className="avatar" src={interviewer.image} alt="Profile Image"/>
                 </Col>
                 <Col>
                 <Row>
                     <div className="name">
-                        {`${props.interviewer.firstName} ${props.interviewer.lastName}`}
+                        {`${interviewer.firstName} ${interviewer.lastName}`}
                     </div>
                 </Row>
                 <Row>
                 <div className="role">
-                        {props.interviewer.jobTitle}
+                        {interviewer.jobTitle}
                     </div>
                 </Row>
                 </Col>
@@ -32,6 +31,7 @@ export default function InterviewerCard(props){
             </Container>
 
             </ListGroupItem>
+
         </div>
     )
 }

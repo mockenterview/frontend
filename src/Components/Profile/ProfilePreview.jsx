@@ -1,17 +1,15 @@
-import React from 'react'
+import React from "react";
 
+export default function ProfilePreview({ selected }) {
+  return (
+    <div className={`${selected.firstName ? "profile-preview" : 'profile-preview-inactive'}`}>
+      <div className="avatar"></div>
+      <div className="name">{selected.firstName}</div>
+      <div className="role">{selected.jobTitle}</div>
+      <div className="skills">
 
-export default function ProfilePreview(){
-    return (
-        <div className="profile-preview">
-            <div className="avatar"></div>
-            <div className="name">Jerry Dog</div>
-            <div className="role">Sniffer</div>
-            <div className="skills">
-                <div className="skill">Dance</div>
-                <div className="skill">Sing</div>
-                <div className="skill">Play</div>
-            </div>
-        </div>
-    )
+      </div>
+      <div className="bio">{selected.bio}</div>
+    </div>
+  );
 }
