@@ -1,9 +1,9 @@
 import React from 'react'
 
 const Mission = () => {
-    const [memberCount, setMembercount] = React.useState(100000)
-    const [intHours, setIntHours] = React.useState(400000)
-    const [jobsCount, setJobsCount] = React.useState(80000)
+    const [memberCount] = React.useState(100000)
+    const [intHours] = React.useState(400000)
+    const [jobsCount] = React.useState(80000)
 
     return (
         <div className='mission' id='mission'>

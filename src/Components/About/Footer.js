@@ -13,7 +13,7 @@ const Footer = () => {
                     email: mockenterview@gmail.com
                 </div>
             </div>
-            <div className='logo' className='logoFoot'>
+            <div className='logoFoot'>
                 MockEnterView
             </div>
         </div>

@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Container, Col } from 'reactstrap';
+import { Button, Modal, ModalHeader, ModalBody } from 'reactstrap';
 import Calendar from '../calendar/Calendar'
 
 

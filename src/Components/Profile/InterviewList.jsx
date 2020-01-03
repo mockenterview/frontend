@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { ListGroup, ListGroupItem } from "reactstrap";
+import React from "react";
+import { ListGroup } from "reactstrap";
 
 import InterviewerCard from "./InterviewerCard";
 import SearchForm from "./SearchForm";
